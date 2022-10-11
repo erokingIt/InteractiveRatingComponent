@@ -1,0 +1,177 @@
+.card {
+    background-color: rgb(23, 30, 40);
+    width: 412px;
+    min-width: 412px;
+    height: 415px;
+    overflow: hidden;
+    margin: 2rem;
+    @include border-radius(1rem); /* using the mixins function */
+    
+    img {
+        height: 15rem;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .card_content {
+        padding: $spacing;
+    }
+
+    .card_title {
+        margin: 0;
+        color: white;
+        font-size: 27px;
+        font-weight: 700;
+        margin-bottom: 11px;
+    }
+
+    .card_description {
+        margin: 0;
+        color: $dark-grey;
+        line-height: 1.5;
+        margin-bottom: 27px;
+        font-size: 15px;
+        width: 340px;
+    }
+
+    .star_container {
+        background-color: hsl(213, 19%, 18%);
+        border-radius: 50%;
+        width: 47px;
+        height: 47px;
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    .icon_star {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 83px;
+        margin-top: 10px;
+        width: 327px;
+
+        /* The container */
+        .container {
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: hsl(217, 12%, 63%);
+        }
+        
+        /* Hide the browser's default radio button */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 34px;
+            width: 50px;
+            background-color: hsl(213, 19%, 18%);
+            border-radius: 50%;
+            padding-top: 16px;
+            text-align: center;
+        }
+        
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: hsl(25, 97%, 53%);
+            color: white;
+        }
+        
+        /* When the radio button is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: hsl(216, 12%, 54%);
+            color: white;
+        }
+    
+    }
+
+    .submit_button {
+        color: white;
+        background-color: hsl(25, 97%, 53%);
+        width: 340px;
+        height: 45px;
+        border-radius: 45px;
+        border-style: none;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+    }
+
+    .submit_button:hover {
+        background-color: white;
+        color:hsl(25, 97%, 53%);
+        cursor: pointer;
+    }
+
+    &_dark {
+
+        background-color: black;
+
+        .card_title {
+            color: white;
+        }
+    }
+
+    .tyIllustration_container {
+        width: 170px;
+        height: 110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tyIllustration {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 13px;
+    }
+
+    .sel_rating {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        margin-top: 29px;
+        margin-bottom: 35px;
+    }
+
+    .sel_rating_text {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        color: hsl(25, 97%, 53%);
+        background-color: hsl(213, 19%, 18%);
+        border-radius: 20px;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+        vertical-align: middle;
+        font-size: 15px;
+    }
+
+    .center {
+        text-align: center;
+    }
+}
+

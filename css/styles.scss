@@ -1,0 +1,26 @@
+/* file import */
+@import 'variables';
+@import 'mixins';
+@import 'card';
+@import 'fonts';
+@import 'mobile';
+   
+body {
+    font-family: $fonts;
+    background-color: $primary-color;
+    padding: $spacing;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+svg {
+    //width: auto;
+    //height: auto;
+    max-width: 100%;
+}
