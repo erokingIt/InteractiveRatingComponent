@@ -1,0 +1,249 @@
+/* file import */
+/* $radius is the parameter of the function */
+.card {
+  background-color: rgb(23, 30, 40);
+  width: 412px;
+  min-width: 412px;
+  height: 415px;
+  overflow: hidden;
+  margin: 2rem;
+  border-radius: 1rem;
+  /* using the mixins function */
+}
+.card img {
+  height: 15rem;
+  background-size: cover;
+  background-position: center center;
+}
+.card .card_content {
+  padding: 2rem;
+}
+.card .card_title {
+  margin: 0;
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+.card .card_description {
+  margin: 0;
+  color: hsl(217deg, 12%, 63%);
+  line-height: 1.5;
+  margin-bottom: 27px;
+  font-size: 15px;
+  width: 340px;
+}
+.card .star_container {
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+  position: relative;
+  margin-bottom: 32px;
+}
+.card .icon_star {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.card .rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 83px;
+  margin-top: 10px;
+  width: 327px;
+  /* The container */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+}
+.card .rating .container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: hsl(217deg, 12%, 63%);
+}
+.card .rating .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.card .rating .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 34px;
+  width: 50px;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 50%;
+  padding-top: 16px;
+  text-align: center;
+}
+.card .rating .container:hover input ~ .checkmark {
+  background-color: hsl(25deg, 97%, 53%);
+  color: white;
+}
+.card .rating .container input:checked ~ .checkmark {
+  background-color: hsl(216deg, 12%, 54%);
+  color: white;
+}
+.card .submit_button {
+  color: white;
+  background-color: hsl(25deg, 97%, 53%);
+  width: 340px;
+  height: 45px;
+  border-radius: 45px;
+  border-style: none;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+.card .submit_button:hover {
+  background-color: white;
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+}
+.card_dark {
+  background-color: black;
+}
+.card_dark .card_title {
+  color: white;
+}
+.card .tyIllustration_container {
+  width: 170px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card .tyIllustration {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+}
+.card .sel_rating {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  margin-top: 29px;
+  margin-bottom: 35px;
+}
+.card .sel_rating_text {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 20px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.card .center {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@media (max-width: 375px) {
+  .card {
+    height: 357px;
+    width: 326px;
+    min-width: 326px;
+    margin: auto;
+  }
+  .card .star_container {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 20px;
+  }
+  .card .icon_star {
+    top: 13px;
+    left: 13px;
+  }
+  .card .card_content {
+    padding: 1.6rem;
+  }
+  .card .card_title {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .card .card_description {
+    font-size: 14px;
+    width: 290px;
+    margin-bottom: 31px;
+  }
+  .card .rating {
+    width: 268px;
+    height: 65px;
+  }
+  .card .rating .checkmark {
+    height: 28px;
+    width: 42px;
+    padding-top: 14px;
+    font-size: 13px;
+  }
+  .card .rating .container {
+    padding-left: 29px;
+  }
+  .card .submit_button {
+    width: 279px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+  }
+  .card .tyIllustration_container {
+    width: 150px;
+    height: 88px;
+  }
+  .card .tyIllustration {
+    margin-top: 9px;
+  }
+  .card .sel_rating {
+    margin-bottom: 28px;
+  }
+  .card .sel_rating_text {
+    font-size: 14px;
+  }
+  #rating_result .card_content .card_description {
+    width: 277px;
+  }
+}
+body {
+  font-family: "Overpass", Helvertica, sans-serif;
+  background-color: hsl(216deg, 12%, 8%);
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+svg {
+  max-width: 100%;
+}/*# sourceMappingURL=styles.css.map */

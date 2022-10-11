@@ -1,0 +1,77 @@
+@media (max-width: 375px) {
+    .card {
+        height: 357px;
+        width: 326px;
+        min-width: 326px;
+        margin: auto;
+
+        .star_container {
+            width: 38px;
+            height: 38px;
+            margin-bottom: 20px;
+        }
+
+        .icon_star {
+            top: 13px;
+            left: 13px;
+        }
+
+        .card_content {
+            padding: 1.6rem;
+        }
+
+        .card_title { 
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .card_description {
+            font-size: 14px;
+            width: 290px;
+            margin-bottom: 31px;
+        }
+
+        .rating {
+            width: 268px;
+            height: 65px;
+
+            .checkmark {
+                height: 28px;
+                width: 42px;
+                padding-top: 14px;
+                font-size: 13px;
+            }
+
+            .container {
+                padding-left: 29px;
+            }
+        }
+
+        .submit_button {
+            width: 279px;
+            font-weight: 700;
+            letter-spacing: 0.17em;
+        }
+
+        .tyIllustration_container {
+            width: 150px;
+            height: 88px;
+        }
+
+        .tyIllustration {
+            margin-top: 9px;
+        }
+
+        .sel_rating {
+            margin-bottom: 28px;
+        }
+
+        .sel_rating_text {
+            font-size: 14px;
+        }
+    }
+
+    #rating_result .card_content .card_description {
+        width: 277px;
+    }
+  }
